@@ -161,8 +161,9 @@ img {
   margin-right: 10px;
 }
 .header-link {
+  position: relative;
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 33px;
   font-weight: 500;
   line-height: 1.33;
   letter-spacing: 0.02em;
@@ -171,6 +172,18 @@ img {
 .header-link.current {
   color: var(--header-link-current-color);
 }
+
+.header-link.current::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom:0;
+  left:0;
+  width: 100%;
+  height: 4px;
+  background-color: #188ce8;
+  border-radius: 2px;
+  }
 
 .header-link:hover,
 .header-link:focus,
@@ -794,5 +807,5 @@ p.footer-contact {
   background-color: #2196f3;
   border: 1px solid rgba(0, 0, 0, 0);
   transform: scale(1.2);
-  transition: 200ms;
+  transition: 250ms;
 }
