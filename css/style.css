@@ -155,12 +155,17 @@ img {
 .header-contact-list-icon-mail {
   fill: var(--header-contact-list-icon-color);
   margin-right: 10px;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .header-contact-list-icon-smartphone {
   fill: var(--header-contact-list-icon-color);
   margin-right: 10px;
+
+  transition: fill 250ms var(--timing-function);
 }
+
 .header-link {
   position: relative;
   padding-top: 32px;
@@ -169,6 +174,7 @@ img {
   line-height: 1.33;
   letter-spacing: 0.02em;
   color: var(--header-link-color);
+  transition: color 250ms var(--timing-function);
 }
 .header-link.current {
   color: var(--header-link-current-color);
@@ -212,6 +218,8 @@ img {
   color: var(--header-contact-link-color);
   display: flex;
   align-items: center;
+
+  transition: color 250ms var(--timing-function);
 }
 .header-contact-list-item:hover .header-contact-link {
   color: var(--header-contact-link-active-color);
@@ -225,17 +233,6 @@ img {
   fill: var(--header-contact-link-active-color);
 }
 
-/* 
-.header-contact-link:hover {
-  font-weight: 500;
-  line-height: 1.33;
-  letter-spacing: 0.02em;
-  color: var(--header-contact-link-active-color);
-} */
-/* 
-.header-contact-list:hover .header-contact-list-icon-mail {
-  fill: var(--header-contact-link-active-color);
-} */
 
 .hero_box {
   max-width: 1600px;
@@ -312,27 +309,6 @@ img {
 .hero-btn:focus {
   background: var(--hero-btn-active-color);
 }
-/* 
-.hero-btn::before {
-  content: "Заказать услугу";
-  color: #ffffff;
-  position: absolute;
-  display: inline-block;
-  transform: translateY(-100px);
-  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-btn:hover::before {
-  transform: translateY(0px);
-}
-
-.hero-btn-text {
-  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-btn:hover .hero-btn-text {
-  transform: translateY(100px);
-} */
 
 .dignity-list {
   display: flex;
@@ -513,6 +489,8 @@ img {
   color: var(--team-social-button-color);
   border-radius: 50%;
   background-color: var(--team-social-button-bg-color);
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .team-social-box-item {
@@ -531,6 +509,8 @@ img {
 
 .team-social-button-icon {
   fill: currentColor;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .portfolio-list-nav {
@@ -567,6 +547,7 @@ img {
 
 .portfolio-list-item-link {
   position: relative;
+
 }
 .portfolio-list-item-pl-box {
   width: 100%;
@@ -580,7 +561,7 @@ img {
 .portfolio-list-item-pl {
   display: flex;
   align-items: center;
-  top: 0;
+  top: 100%;
   left: 0;
   position: absolute;
   padding-right: 24px;
@@ -588,12 +569,12 @@ img {
   width: 100%;
   height: 294px;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
+
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item-link:hover .portfolio-list-item-pl {
-  transform: translateY(0);
+  transform: translateY(-100%);
 }
 /*.product-thumb {
   position: relative;
@@ -667,6 +648,9 @@ img {
   color: var(--portfolio-btn-text-color);
   background-color: var(--portfolio-btn-bg-color);
   cursor: pointer;
+
+  transition: color 250ms var(--timing-function), 
+    background-color 250ms var(--timing-function);
 }
 
 .portfolio-btn:hover,
@@ -719,6 +703,8 @@ p.portfolio-description {
   border: 1px solid var(--clients-list-item-button-border-color);
   border-radius: 4px;
   background-color: var(--clients-list-item-button-bg-color);
+
+  transition: border 250ms var(--timing-function);
 }
 
 .clients-list-item-button:hover {
@@ -732,6 +718,8 @@ p.portfolio-description {
 
 .clients-list-item-button-icon {
   fill: currentColor;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .clients-list-item {
@@ -816,6 +804,8 @@ p.footer-contact {
   color: var(--footer-social-text-button-color);
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .footer-social-box-item {
@@ -840,11 +830,14 @@ p.footer-contact {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+ 
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+ 
+  
 }
 
 .modal {
@@ -857,6 +850,7 @@ p.footer-contact {
   background-color: #ffffff;
   transform: translate(-50%, -50%);
   border-radius: 4px;
+  
 }
 
 .modal-close-btn {
