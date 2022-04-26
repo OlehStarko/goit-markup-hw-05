@@ -300,13 +300,15 @@ img {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-
-  transition: background-color 250ms var(--timing-function);
+  transform: scale(1);
+  transition: background-color 250ms var(--timing-function),
+    transform 250ms var(--timing-function);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
   background: var(--hero-btn-active-color);
+  transform: scale(1.1);
 }
 
 .dignity-list {
